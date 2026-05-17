@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Stacklane — Ship faster, sleep better</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+        colors: {
+          brand: { 50:'#eef4ff',100:'#dae6ff',500:'#4f6bff',600:'#3b53e6',700:'#2f42b8' }
+        }
+      }
+    }
+  }
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  .gradient-bg {
+    background:
+      radial-gradient(800px 400px at 20% 0%, rgba(79,107,255,0.15), transparent 60%),
+      radial-gradient(700px 350px at 90% 10%, rgba(168,85,247,0.12), transparent 60%);
+  }
+  .grid-mask {
+    background-image:
+      linear-gradient(rgba(15,23,42,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(15,23,42,0.06) 1px, transparent 1px);
+    background-size: 36px 36px;
+    mask-image: radial-gradient(ellipse at center, black 40%, transparent 75%);
+  }
+</style>
+</head>
+<body class="font-sans text-slate-800 bg-white antialiased">
+
+<!-- Nav -->
+<header class="sticky top-0 z-50 backdrop-blur bg-white/70 border-b border-slate-200/60">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2 font-bold text-lg">
+      <span class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-purple-500 inline-block"></span>
+      Stacklane
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+      <a href="#features" class="hover:text-slate-900">Features</a>
+      <a href="#pricing" class="hover:text-slate-900">Pricing</a>
+      <a href="#testimonials" class="hover:text-slate-900">Customers</a>
+      <a href="#" class="hover:text-slate-900">Docs</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="#" class="hidden sm:inline text-sm font-medium text-slate-600 hover:text-slate-900">Sign in</a>
+      <a href="#" class="text-sm font-semibold bg-slate-900 text-white px-4 py-2 rounded-lg hover:bg-slate-700 transition">Get started</a>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="relative gradient-bg overflow-hidden">
+  <div class="absolute inset-0 grid-mask pointer-events-none"></div>
+  <div class="relative max-w-7xl mx-auto px-6 pt-20 pb-28 text-center">
+    <div class="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-600 mb-6 shadow-sm">
+      <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+      New: AI-powered deploy previews
+    </div>
+    <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 max-w-4xl mx-auto leading-tight">
+      Ship faster.<br/>
+      <span class="bg-gradient-to-r from-brand-600 to-purple-600 bg-clip-text text-transparent">Sleep better.</span>
+    </h1>
+    <p class="mt-6 text-lg md:text-xl text-slate-600 max-w-2xl mx-auto">
+      The all-in-one platform for modern engineering teams. Deploy, monitor, and scale your apps without the operational headache.
+    </p>
+    <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="#" class="bg-slate-900 text-white font-semibold px-6 py-3 rounded-lg hover:bg-slate-700 transition">Start free trial</a>
+      <a href="#" class="bg-white border border-slate-200 text-slate-900 font-semibold px-6 py-3 rounded-lg hover:bg-slate-50 transition flex items-center justify-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><circle cx="12" cy="12" r="10" stroke-width="2"/></svg>
+        Watch demo
+      </a>
+    </div>
+    <p class="mt-4 text-xs text-slate-500">No credit card required · 14-day free trial</p>
+
+    <!-- Mock product -->
+    <div class="mt-16 max-w-5xl mx-auto">
+      <div class="rounded-2xl border border-slate-200 bg-white shadow-2xl shadow-brand-500/10 overflow-hidden">
+        <div class="flex items-center gap-2 px-4 py-3 border-b border-slate-200 bg-slate-50">
+          <span class="w-3 h-3 rounded-full bg-red-400"></span>
+          <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
+          <span class="w-3 h-3 rounded-full bg-green-400"></span>
+          <span class="ml-4 text-xs text-slate-500">app.stacklane.io/dashboard</span>
+        </div>
+        <div class="grid grid-cols-12 gap-4 p-6 bg-gradient-to-br from-slate-50 to-white">
+          <div class="col-span-3 space-y-2">
+            <div class="h-3 bg-slate-200 rounded w-3/4"></div>
+            <div class="h-8 bg-brand-100 rounded"></div>
+            <div class="h-8 bg-slate-100 rounded"></div>
+            <div class="h-8 bg-slate-100 rounded"></div>
+            <div class="h-8 bg-slate-100 rounded"></div>
+          </div>
+          <div class="col-span-9 space-y-4">
+            <div class="grid grid-cols-3 gap-4">
+              <div class="p-4 rounded-lg bg-white border border-slate-200">
+                <div class="text-xs text-slate-500">Deployments</div>
+                <div class="text-2xl font-bold mt-1">1,284</div>
+                <div class="text-xs text-emerald-600 mt-1">+12.4%</div>
+              </div>
+              <div class="p-4 rounded-lg bg-white border border-slate-200">
+                <div class="text-xs text-slate-500">Uptime</div>
+                <div class="text-2xl font-bold mt-1">99.99%</div>
+                <div class="text-xs text-emerald-600 mt-1">+0.02%</div>
+              </div>
+              <div class="p-4 rounded-lg bg-white border border-slate-200">
+                <div class="text-xs text-slate-500">p95 latency</div>
+                <div class="text-2xl font-bold mt-1">42ms</div>
+                <div class="text-xs text-emerald-600 mt-1">-8ms</div>
+              </div>
+            </div>
+            <div class="h-40 rounded-lg bg-white border border-slate-200 p-4 flex items-end gap-1">
+              <div class="flex-1 bg-brand-200 rounded-t" style="height:40%"></div>
+              <div class="flex-1 bg-brand-300 rounded-t" style="height:55%"></div>
+              <div class="flex-1 bg-brand-400 rounded-t" style="height:35%"></div>
+              <div class="flex-1 bg-brand-500 rounded-t" style="height:70%"></div>
+              <div class="flex-1 bg-brand-400 rounded-t" style="height:50%"></div>
+              <div class="flex-1 bg-brand-500 rounded-t" style="height:80%"></div>
+              <div class="flex-1 bg-brand-600 rounded-t" style="height:65%"></div>
+              <div class="flex-1 bg-brand-500 rounded-t" style="height:90%"></div>
+              <div class="flex-1 bg-purple-500 rounded-t" style="height:75%"></div>
+              <div class="flex-1 bg-purple-600 rounded-t" style="height:95%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Logos -->
+<section class="border-y border-slate-200 bg-slate-50/50">
+  <div class="max-w-7xl mx-auto px-6 py-12">
+    <p class="text-center text-xs font-semibold text-slate-500 uppercase tracking-wider mb-8">Trusted by teams at</p>
+    <div class="flex flex-wrap items-center justify-center gap-x-12 gap-y-6 opacity-60">
+      <span class="text-2xl font-bold text-slate-700">Acme</span>
+      <span class="text-2xl font-bold text-slate-700 italic">Globex</span>
+      <span class="text-2xl font-extrabold text-slate-700 tracking-tighter">INITECH</span>
+      <span class="text-2xl font-bold text-slate-700">Hooli.</span>
+      <span class="text-2xl font-bold text-slate-700">Pied Piper</span>
+      <span class="text-2xl font-bold text-slate-700 tracking-widest">VEHEMENT</span>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section id="features" class="py-24">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <p class="text-sm font-semibold text-brand-600 uppercase tracking-wider">Features</p>
+      <h2 class="mt-2 text-4xl font-extrabold text-slate-900 tracking-tight">Everything you need to ship</h2>
+      <p class="mt-4 text-lg text-slate-600">From git push to global edge in seconds. Built for teams that move fast and break nothing.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="p-6 rounded-2xl border border-slate-200 hover:border-brand-300 hover:shadow-lg hover:shadow-brand-500/5 transition">
+        <div class="w-10 h-10 rounded-lg bg-brand-100 text-brand-600 flex items-center justify-center mb-4">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <h3 class="font-semibold text-slate-900">Instant deploys</h3>
+        <p class="mt-2 text-sm text-slate-600">Push to main and go live in under 30 seconds. Atomic rollbacks included.</p>
+      </div>
+      <div class="p-6 rounded-2xl border border-slate-200 hover:border-brand-300 hover:shadow-lg hover:shadow-brand-500/5 transition">
+        <div class="w-10 h-10 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center mb-4">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg>
+        </div>
+        <h3 class="font-semibold text-slate-900">Global edge network</h3>
+        <p class="mt-2 text-sm text-slate-600">280+ POPs worldwide. Your users get sub-50ms response times, automatically.</p>
+      </div>
+      <div class="p-6 rounded-2xl border border-slate-200 hover:border-brand-300 hover:shadow-lg hover:shadow-brand-500/5 transition">
+        <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center mb-4">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <h3 class="font-semibold text-slate-900">Enterprise security</h3>
+        <p class="mt-2 text-sm text-slate-600">SOC 2 Type II, GDPR, HIPAA. Encryption at rest and in transit by default.</p>
+      </div>
+      <div class="p-6 rounded-2xl border border-slate-200 hover:border-brand-300 hover:shadow-lg hover:shadow-brand-500/5 transition">
+        <div class="w-10 h-10 rounded-lg bg-orange-100 text-orange-600 flex items-center justify-center mb-4">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        </div>
+        <h3 class="font-semibold text-slate-900">Real-time analytics</h3>
+        <p class="mt-2 text-sm text-slate-600">Track every request, every error, every dollar. Dashboards that actually load.</p>
+      </div>
+      <div class="p-6 rounded-2xl border border-slate-200 hover:border-brand-300 hover:shadow-lg hover:shadow-brand-500/5 transition">
+        <div class="w-10 h-10 rounded-lg bg-pink-100 text-pink-600 flex items-center justify-center mb-4">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+        </div>
+        <h3 class="font-semibold text-slate-900">Team collaboration</h3>
+        <p class="mt-2 text-sm text-slate-600">Preview deploys for every PR. Comment, review, ship — without leaving GitHub.</p>
+      </div>
+      <div class="p-6 rounded-2xl border border-slate-200 hover:border-brand-300 hover:shadow-lg hover:shadow-brand-500/5 transition">
+        <div class="w-10 h-10 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center mb-4">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3 class="font-semibold text-slate-900">24/7 support</h3>
+        <p class="mt-2 text-sm text-slate-600">Real engineers, not chatbots. Median first response: under 4 minutes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section id="testimonials" class="py-24 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <p class="text-sm font-semibold text-brand-600 uppercase tracking-wider">Loved by developers</p>
+      <h2 class="mt-2 text-4xl font-extrabold text-slate-900 tracking-tight">Don't just take our word for it</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <figure class="p-6 rounded-2xl bg-white border border-slate-200">
+        <blockquote class="text-slate-700">"We migrated from our old provider in an afternoon. Build times dropped 70%. The team is genuinely happier."</blockquote>
+        <figcaption class="mt-4 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-brand-500 to-purple-500"></div>
+          <div>
+            <div class="text-sm font-semibold text-slate-900">Sarah Chen</div>
+            <div class="text-xs text-slate-500">CTO, Lumenly</div>
+          </div>
+        </figcaption>
+      </figure>
+      <figure class="p-6 rounded-2xl bg-white border border-slate-200">
+        <blockquote class="text-slate-700">"Finally, a platform that doesn't fight us. Preview deploys alone paid for the whole subscription."</blockquote>
+        <figcaption class="mt-4 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-orange-500 to-pink-500"></div>
+          <div>
+            <div class="text-sm font-semibold text-slate-900">Marcus Reyes</div>
+            <div class="text-xs text-slate-500">Staff Engineer, Northwind</div>
+          </div>
+        </figcaption>
+      </figure>
+      <figure class="p-6 rounded-2xl bg-white border border-slate-200">
+        <blockquote class="text-slate-700">"Our oncall load dropped by half. The observability story is best-in-class and the dashboards are gorgeous."</blockquote>
+        <figcaption class="mt-4 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-500 to-sky-500"></div>
+          <div>
+            <div class="text-sm font-semibold text-slate-900">Priya Anand</div>
+            <div class="text-xs text-slate-500">VP Eng, Coastline</div>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section id="pricing" class="py-24">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <p class="text-sm font-semibold text-brand-600 uppercase tracking-wider">Pricing</p>
+      <h2 class="mt-2 text-4xl font-extrabold text-slate-900 tracking-tight">Simple, predictable pricing</h2>
+      <p class="mt-4 text-lg text-slate-600">Start free. Scale as you grow. No surprise bills.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <div class="p-8 rounded-2xl border border-slate-200 bg-white">
+        <h3 class="font-semibold text-slate-900">Hobby</h3>
+        <div class="mt-4 flex items-baseline gap-1">
+          <span class="text-4xl font-extrabold text-slate-900">$0</span>
+          <span class="text-slate-500">/mo</span>
+        </div>
+        <p class="mt-2 text-sm text-slate-600">For side projects and experiments.</p>
+        <a href="#" class="mt-6 block text-center font-semibold border border-slate-200 text-slate-900 py-2.5 rounded-lg hover:bg-slate-50 transition">Start free</a>
+        <ul class="mt-6 space-y-3 text-sm text-slate-600">
+          <li class="flex gap-2"><span class="text-emerald-500">✓</span> 100GB bandwidth</li>
+          <li class="flex gap-2"><span class="text-emerald-500">✓</span> Unlimited deploys</li>
+          <li class="flex gap-2"><span class="text-emerald-500">✓</span> Community support</li>
+        </ul>
+      </div>
+      <div class="p-8 rounded-2xl border-2 border-brand-500 bg-white relative shadow-xl shadow-brand-500/10">
+        <span class="absolute -top-3 left-1/2 -translate-x-1/2 text-xs font-semibold bg-brand-500 text-white px-3 py-1 rounded-full">Most popular</span>
+        <h3 class="font-semibold text-slate-900">Pro</h3>
+        <div class="mt-4 flex items-baseline gap-1">
+          <span class="text-4xl font-extrabold text-slate-900">$29</span>
+          <span class="text-slate-500">/mo</span>
+        </div>
+        <p class="mt-2 text-sm text-slate-600">For growing teams and production apps.</p>
+        <a href="#" class="mt-6 block text-center font-semibold bg-slate-900 text-white py-2.5 rounded-lg hover:bg-slate-700 transition">Start 14-day trial</a>
+        <ul class="mt-6 space-y-3 text-sm text-slate-600">
+          <li class="flex gap-2"><span class="text-emerald-500">✓</span> 1TB bandwidth</li>
+          <li class="flex gap-2"><span class="text-emerald-500">✓</span> Preview deploys</li>
+          <li class="flex gap-2"><span class="text-emerald-500">✓</span> Advanced analytics</li>
+          <li class="flex gap-2"><span class="text-emerald-500">✓</span> Priority support</li>
+        </ul>
+      </div>
+      <div class="p-8 rounded-2xl border border-slate-200 bg-white">
+        <h3 class="font-semibold text-slate-900">Enterprise</h3>
+        <div class="mt-4 flex items-baseline gap-1">
+          <span class="text-4xl font-extrabold text-slate-900">Custom</span>
+        </div>
+        <p class="mt-2 text-sm text-slate-600">For organizations with custom needs.</p>
+        <a href="#" class="mt-6 block text-center font-semibold border border-slate-200 text-slate-900 py-2.5 rounded-lg hover:bg-slate-50 transition">Contact sales</a>
+        <ul class="mt-6 space-y-3 text-sm text-slate-600">
+          <li class="flex gap-2"><span class="text-emerald-500">✓</span> Unlimited bandwidth</li>
+          <li class="flex gap-2"><span class="text-emerald-500">✓</span> SSO + SAML</li>
+          <li class="flex gap-2"><span class="text-emerald-500">✓</span> Custom SLA</li>
+          <li class="flex gap-2"><span class="text-emerald-500">✓</span> Dedicated CSM</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-20">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="rounded-3xl bg-gradient-to-br from-slate-900 via-brand-700 to-purple-700 p-12 md:p-16 text-center text-white relative overflow-hidden">
+      <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 20% 30%, white 1px, transparent 1px), radial-gradient(circle at 80% 70%, white 1px, transparent 1px); background-size: 60px 60px;"></div>
+      <div class="relative">
+        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Ready to ship better software?</h2>
+        <p class="mt-4 text-lg text-white/80 max-w-xl mx-auto">Join 12,000+ teams building on Stacklane. Free for 14 days, no card required.</p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="#" class="bg-white text-slate-900 font-semibold px-6 py-3 rounded-lg hover:bg-slate-100 transition">Get started free</a>
+          <a href="#" class="bg-white/10 backdrop-blur border border-white/20 text-white font-semibold px-6 py-3 rounded-lg hover:bg-white/20 transition">Talk to sales</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="border-t border-slate-200 py-12">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-5 gap-8">
+    <div class="md:col-span-2">
+      <a href="#" class="flex items-center gap-2 font-bold text-lg">
+        <span class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-purple-500 inline-block"></span>
+        Stacklane
+      </a>
+      <p class="mt-3 text-sm text-slate-600 max-w-xs">The platform engineering teams love. Built in San Francisco.</p>
+    </div>
+    <div>
+      <h4 class="text-sm font-semibold text-slate-900">Product</h4>
+      <ul class="mt-3 space-y-2 text-sm text-slate-600">
+        <li><a href="#" class="hover:text-slate-900">Features</a></li>
+        <li><a href="#" class="hover:text-slate-900">Pricing</a></li>
+        <li><a href="#" class="hover:text-slate-900">Changelog</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-sm font-semibold text-slate-900">Company</h4>
+      <ul class="mt-3 space-y-2 text-sm text-slate-600">
+        <li><a href="#" class="hover:text-slate-900">About</a></li>
+        <li><a href="#" class="hover:text-slate-900">Blog</a></li>
+        <li><a href="#" class="hover:text-slate-900">Careers</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-sm font-semibold text-slate-900">Legal</h4>
+      <ul class="mt-3 space-y-2 text-sm text-slate-600">
+        <li><a href="#" class="hover:text-slate-900">Privacy</a></li>
+        <li><a href="#" class="hover:text-slate-900">Terms</a></li>
+        <li><a href="#" class="hover:text-slate-900">Security</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-6 mt-10 pt-6 border-t border-slate-200 text-xs text-slate-500 flex justify-between">
+    <span>© 2026 Stacklane, Inc.</span>
+    <span>Made with care.</span>
+  </div>
+</footer>
+
+</body>
+</html>
